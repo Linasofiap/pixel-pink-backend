@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "b2b0c55e-a786-4f98-8b81-8eb354ab11d2",
+		"name": "pixel-pink",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36825722"
+	},
+	"item": [
+		{
+			"name": "LogInUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"correo@correo.com\",\r\n    \"password\":\"Contraseña_1235\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"correo@correo.com\",\r\n    \"password\": \"Contraseña_123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"correo@correo.com\",\r\n    \"password\":\"Contraseña_1235\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/update-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQwOTQyOSwiZXhwIjoxNzIzNDE2NjI5fQ.Jd-rgpvOO6PgCX4w3ekj52igWiAc3iu9Cw2t9PcVE0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juliana\",\r\n    \"lastName\": \"Ospina\",\r\n    \"phone\": 3239068680,\r\n    \"state\": \"Quindio\",\r\n    \"city\": \"Armenia\",\r\n    \"address\": \"Carrera 13 #26-13\",\r\n    \"detail\": \"Apto 301\",\r\n    \"observations\": \"Edificio ep\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/create-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"create-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQwOTQyOSwiZXhwIjoxNzIzNDE2NjI5fQ.Jd-rgpvOO6PgCX4w3ekj52igWiAc3iu9Cw2t9PcVE0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juliana\",\r\n    \"lastName\": \"Ospina\",\r\n    \"phone\": 3239068680,\r\n    \"state\": \"Quindio\",\r\n    \"city\": \"Armenia\",\r\n    \"address\": \"Carrera 13 #26-13\",\r\n    \"detail\": \"Apto 305\",\r\n    \"observations\": \"Edificio ep\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/update-data/66b929f870bb466c4ff55afd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"update-data",
+						"66b929f870bb466c4ff55afd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQwOTQyOSwiZXhwIjoxNzIzNDE2NjI5fQ.Jd-rgpvOO6PgCX4w3ekj52igWiAc3iu9Cw2t9PcVE0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/delete-data/66b925cfc35a01378c1656af",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"delete-data",
+						"66b925cfc35a01378c1656af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suscribe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juliana\",\r\n    \"email\": \"correo@correo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/suscribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"suscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindSuscribers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/find-suscribers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"find-suscribers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSuscriber",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"correo@correo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/delete-suscribtion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"delete-suscribtion"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQxODg0NCwiZXhwIjoxNzIzNDI2MDQ0fQ.JyIshZMredlx6sV0Q1X90j8lmlq449gannTI8SJNm5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"name2\",\r\n    \"price\": 123,\r\n    \"description\": \"description\",\r\n    \"clotheCollection\": \"Collection\",\r\n    \"available\": true,\r\n    \"imgA\": \"url\",\r\n    \"imgB\": \"url\",\r\n    \"imgC\": \"url\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/new-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"new-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQxODg0NCwiZXhwIjoxNzIzNDI2MDQ0fQ.JyIshZMredlx6sV0Q1X90j8lmlq449gannTI8SJNm5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"name\",\r\n    \"price\": 123,\r\n    \"description\": \"description\",\r\n    \"clotheCollection\": \"Collection2\",\r\n    \"available\": true,\r\n    \"imgA\": \"url\",\r\n    \"imgB\": \"url\",\r\n    \"imgC\": \"url\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/update-product/66b94941bceb58ae417dad7a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"update-product",
+						"66b94941bceb58ae417dad7a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQxODg0NCwiZXhwIjoxNzIzNDI2MDQ0fQ.JyIshZMredlx6sV0Q1X90j8lmlq449gannTI8SJNm5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/get-product/66b94ac70f19479664d3f2b1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"get-product",
+						"66b94ac70f19479664d3f2b1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQyNTAxOSwiZXhwIjoxNzIzNDMyMjE5fQ.EtGprnCOK4PMhxmUqKhZDB3t6Il_DolA8mZ5mfYybfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"66b94941bceb58ae417dad7a\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"productId\": \"66b94ac70f19479664d3f2b1\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrder",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6IjY2YjkxY2Y4OWQ1MDkxYWIwZDM1YzkyYSIsImlhdCI6MTcyMzQ4OTY2NywiZXhwIjoxNzIzNDk2ODY3fQ.40-IiYlRiFEZrHiLnjVkBG_O0OeN4c5RQvLXvay1rkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/get-order/66b9616f1220ef1619bb07cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"get-order",
+						"66b9616f1220ef1619bb07cd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
