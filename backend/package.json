@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon index.js"
   },
   "author": "Juliana DEV",
   "license": "ISC",
