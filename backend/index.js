@@ -14,6 +14,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 app.use('/', api)
+app.listen(port, () => {
+    console.log(`Servidor conectado al puerto ${port}`)
+})
 // app.use('/', express.static(__dirname + '/dist/frontend/browser'));
 // app.get('/*', (req, res, next) => {
 //     res.sendFile(path.resolve(__dirname + "/dist/frontend/browser/index.html"));
